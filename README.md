@@ -1,4 +1,4 @@
-# 🚀 Livio Tri Gieraldo — DevOps & Cloud Engineering Dashboard
+# Portfolio
 
 A **lightweight, mobile-first portfolio dashboard** engineered to resemble real-world **observability systems and CI/CD pipelines**.
 
