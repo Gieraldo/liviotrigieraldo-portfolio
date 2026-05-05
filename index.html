@@ -1,280 +1,320 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livio Tri Gieraldo | Cloud Engineer</title>
-    <meta name="description" content="Portfolio of Livio Tri Gieraldo, Cloud/DevOps Engineer specializing in AWS, GCP, OpenShift, and IaC.">
-    <!-- Tailwind CSS -->
+    <title>Livio Tri Gieraldo - Cloud & DevOps Engineer</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        cloud: {
-                            900: '#0f172a', // slate-900
-                            800: '#1e293b', // slate-800
-                            700: '#334155', // slate-700
-                            accent: '#38bdf8', // light blue 
-                        }
-                    },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        mono: ['Fira Code', 'monospace'],
+                        mono: ['JetBrains Mono', 'monospace'],
                     }
                 }
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons via CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #181B1F;
+            color: #E0E0E0;
+            margin: 0;
+        }
+        /* Custom scrollbar hiding utility */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 </head>
-<body class="bg-cloud-900 text-slate-300 font-sans antialiased selection:bg-cloud-accent selection:text-cloud-900">
-
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-cloud-900/90 backdrop-blur-sm z-50 border-b border-cloud-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex-shrink-0">
-                    <a href="#" class="font-mono text-cloud-accent text-xl font-bold tracking-tighter">LTG<span class="text-slate-500">_</span></a>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#about" class="hover:text-cloud-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Tentang</a>
-                        <a href="#skills" class="hover:text-cloud-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Keahlian</a>
-                        <a href="#experience" class="hover:text-cloud-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Pengalaman</a>
-                        <a href="#certifications" class="hover:text-cloud-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Sertifikasi</a>
-                    </div>
-                </div>
+<body class="min-h-screen font-sans selection:bg-[#3274D9] selection:text-white pb-20">
+    <div class="max-w-3xl mx-auto px-5 md:px-8 pt-12 md:pt-20">
+        
+        <!-- SECTION 1: Status Hero -->
+        <header class="mb-12">
+            <div class="flex items-center gap-2 mb-4 font-mono text-xs md:text-sm">
+                <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00FF9D] opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-[#00FF9D]"></span>
+                </span>
+                <span class="text-[#00FF9D] uppercase tracking-wider font-semibold">System Status: Online</span>
             </div>
-        </div>
-    </nav>
+            
+            <h1 class="text-4xl md:text-5xl font-semibold text-white mb-2 tracking-tight">Livio Tri Gieraldo</h1>
+            <h2 class="text-xl md:text-2xl font-mono text-[#3274D9] mb-6 flex items-center gap-2">
+                <i data-lucide="terminal" class="w-6 h-6"></i>
+                Cloud & DevOps Engineer
+            </h2>
+            
+            <p class="text-slate-400 text-base md:text-lg max-w-2xl leading-relaxed mb-6">
+                Designing, automating, and operating production-grade cloud and on-prem infrastructure. 
+                Focused on high-availability, zero-downtime migrations, and automated self-healing systems.
+            </p>
 
-    <main class="pt-16">
-        <!-- Hero Section -->
-        <header id="hero" class="min-h-[80vh] flex items-center bg-gradient-to-b from-cloud-900 to-cloud-800 border-b border-cloud-800">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <p class="font-mono text-cloud-accent mb-4">> Hello, World. Nama saya</p>
-                <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">Livio Tri Gieraldo.</h1>
-                <h2 class="text-3xl md:text-5xl font-bold text-slate-400 mb-6">Saya membangun infrastruktur yang tangguh.</h2>
-                <p class="max-w-2xl text-lg md:text-xl text-slate-400 mb-10 leading-relaxed">
-                    Cloud / DevOps Engineer dengan keahlian dalam merancang, mengotomatisasi, dan mengoperasikan infrastruktur kelas produksi di AWS, GCP, dan Red Hat OpenShift.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="mailto:liviotrigieraldo21@gmail.com" class="bg-transparent hover:bg-cloud-accent/10 text-cloud-accent border border-cloud-accent font-mono py-3 px-6 rounded transition-colors duration-300">
-                        Hubungi Saya
-                    </a>
+            <div class="flex flex-col md:flex-row gap-3 md:gap-6 font-mono text-sm text-slate-400">
+                <a href="mailto:liviotrigieraldo21@gmail.com" class="flex items-center gap-2 hover:text-white transition-colors">
+                    <i data-lucide="mail" class="w-4 h-4"></i> liviotrigieraldo21@gmail.com
+                </a>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="smartphone" class="w-4 h-4"></i> (+62) 896-1032-6146
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4"></i> Bekasi, Indonesia
                 </div>
             </div>
         </header>
 
-        <!-- About Section -->
-        <section id="about" class="py-24 border-b border-cloud-800">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="flex items-center text-2xl font-bold text-white mb-8">
-                    <span class="font-mono text-cloud-accent text-xl mr-2">01.</span> Ringkasan Profesional
-                    <div class="h-px bg-cloud-800 ml-4 flex-grow"></div>
-                </h2>
-                <div class="text-slate-400 space-y-4 leading-relaxed text-lg">
-                    <p>
-                        Dengan latar belakang yang kuat di Linux Systems Engineering, CI/CD pipelines, dan Infrastructure as Code (Terraform, Ansible), saya berfokus pada pembangunan sistem yang *scalable* dan aman.
-                    </p>
-                    <p>
-                        Saya memiliki rekam jejak yang terbukti dalam mendukung lingkungan *high-availability* dengan SLA yang ketat, basis pengguna berskala besar (terutama di sektor telekomunikasi dan perbankan), serta kolaborasi lintas tim fungsional.
-                    </p>
+        <!-- SECTION 2: Scale Metrics -->
+        <section class="mb-16">
+            <div class="flex items-center gap-2 mb-4 text-white">
+                <i data-lucide="activity" class="w-5 h-5 text-[#F2CC0C]"></i>
+                <h3 class="text-lg font-semibold font-sans">Operational Scale</h3>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-[#22252B] p-4 rounded-lg border border-slate-800 flex flex-col items-center text-center">
+                    <span class="text-2xl md:text-3xl font-mono font-bold text-white mb-1">80+</span>
+                    <span class="text-xs text-slate-400 font-sans uppercase tracking-wide">AWS Accounts</span>
+                </div>
+                <div class="bg-[#22252B] p-4 rounded-lg border border-slate-800 flex flex-col items-center text-center">
+                    <span class="text-2xl md:text-3xl font-mono font-bold text-white mb-1">10+</span>
+                    <span class="text-xs text-slate-400 font-sans uppercase tracking-wide">OpenShift and Kubernetes Clusters</span>
+                </div>
+                <div class="bg-[#22252B] p-4 rounded-lg border border-slate-800 flex flex-col items-center text-center">
+                    <span class="text-2xl md:text-3xl font-mono font-bold text-white mb-1">Dozens</span>
+                    <span class="text-xs text-slate-400 font-sans uppercase tracking-wide">Users Handled</span>
+                </div>
+                <div class="bg-[#22252B] p-4 rounded-lg border border-slate-800 flex flex-col items-center text-center">
+                    <span class="text-2xl md:text-3xl font-mono font-bold text-white mb-1">100%</span>
+                    <span class="text-xs text-slate-400 font-sans uppercase tracking-wide">IaC Managed</span>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="py-24 bg-cloud-800/50 border-b border-cloud-800">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="flex items-center text-2xl font-bold text-white mb-12 max-w-4xl mx-auto">
-                    <span class="font-mono text-cloud-accent text-xl mr-2">02.</span> Keahlian Teknis Utama
-                    <div class="h-px bg-cloud-700 ml-4 flex-grow"></div>
-                </h2>
+        <!-- SECTION 3: Core Stack -->
+        <section class="mb-16">
+            <div class="flex items-center gap-2 mb-4 text-white">
+                <i data-lucide="server" class="w-5 h-5 text-[#3274D9]"></i>
+                <h3 class="text-lg font-semibold font-sans">Infrastructure Stack</h3>
+            </div>
+            <div class="bg-[#22252B] p-5 md:p-6 rounded-lg border border-slate-800">
+                <div class="space-y-6">
+                    <!-- Category 1 -->
+                    <div>
+                        <h4 class="text-xs font-mono text-slate-500 mb-2 uppercase">Cloud & Orchestration</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-[#181B1F] border border-slate-700 text-[#E0E0E0] px-3 py-1 rounded-md text-sm font-mono hover:border-[#3274D9] transition-colors cursor-default">AWS</span>
+                            <span class="bg-[#181B1F] border border-slate-700 text-[#E0E0E0] px-3 py-1 rounded-md text-sm font-mono hover:border-[#3274D9] transition-colors cursor-default">GCP</span>
+                            <span class="bg-[#181B1F] border border-slate-700 text-[#E0E0E0] px-3 py-1 rounded-md text-sm font-mono hover:border-[#3274D9] transition-colors cursor-default">Kubernetes</span>
+                            <span class="bg-[#181B1F] border border-slate-700 text-[#E0E0E0] px-3 py-1 rounded-md text-sm font-mono hover:border-[#3274D9] transition-colors cursor-default">Red Hat OpenShift</span>
+                        </div>
+                    </div>
+                    <!-- Category 2 -->
+                    <div>
+                        <h4 class="text-xs font-mono text-slate-500 mb-2 uppercase">IaC & Automation</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-[#181B1F] border border-slate-700 text-[#E0E0E0] px-3 py-1 rounded-md text-sm font-mono hover:border-[#3274D9] transition-colors cursor-default">Terraform</span>
+                            <span class="bg-[#181B1F] border border-slate-700 text-[#E0E0E0] px-3 py-1 rounded-md text-sm font-mono hover:border-[#3274D9] transition-colors cursor-default">Ansible/AAP</span>
+                            <span class="bg-[#181B1F] border border-slate-700 text-[#E0E0E0] px-3 py-1 rounded-md text-sm font-mono hover:border-[#3274D9] transition-colors cursor-default">GitHub Actions</span>
+                            <span class="bg-[#181B1F] border border-slate-700 text-[#E0E0E0] px-3 py-1 rounded-md text-sm font-mono hover:border-[#3274D9] transition-colors cursor-default">Jenkins</span>
+                        </div>
+                    </div>
+                    <!-- Category 3 -->
+                    <div>
+                        <h4 class="text-xs font-mono text-slate-500 mb-2 uppercase">Observability</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-[#181B1F] border border-slate-700 text-[#E0E0E0] px-3 py-1 rounded-md text-sm font-mono hover:border-[#3274D9] transition-colors cursor-default">Prometheus</span>
+                            <span class="bg-[#181B1F] border border-slate-700 text-[#E0E0E0] px-3 py-1 rounded-md text-sm font-mono hover:border-[#3274D9] transition-colors cursor-default">Grafana</span>
+                            <span class="bg-[#181B1F] border border-slate-700 text-[#E0E0E0] px-3 py-1 rounded-md text-sm font-mono hover:border-[#3274D9] transition-colors cursor-default">Elasticsearch</span>
+                            <span class="bg-[#181B1F] border border-slate-700 text-[#E0E0E0] px-3 py-1 rounded-md text-sm font-mono hover:border-[#3274D9] transition-colors cursor-default">Kibana</span>
+                        </div>
+                    </div>
+                    <!-- Category 4 -->
+                    <div>
+                        <h4 class="text-xs font-mono text-slate-500 mb-2 uppercase">OS & Core</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-[#181B1F] border border-slate-700 text-[#E0E0E0] px-3 py-1 rounded-md text-sm font-mono hover:border-[#3274D9] transition-colors cursor-default">RHEL</span>
+                            <span class="bg-[#181B1F] border border-slate-700 text-[#E0E0E0] px-3 py-1 rounded-md text-sm font-mono hover:border-[#3274D9] transition-colors cursor-default">Ubuntu</span>
+                            <span class="bg-[#181B1F] border border-slate-700 text-[#E0E0E0] px-3 py-1 rounded-md text-sm font-mono hover:border-[#3274D9] transition-colors cursor-default">Bash</span>
+                            <span class="bg-[#181B1F] border border-slate-700 text-[#E0E0E0] px-3 py-1 rounded-md text-sm font-mono hover:border-[#3274D9] transition-colors cursor-default">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: CI/CD Pipeline Timeline -->
+        <section class="mb-16">
+            <div class="flex items-center gap-2 mb-6 text-white">
+                <i data-lucide="git-merge" class="w-5 h-5 text-[#00FF9D]"></i>
+                <h3 class="text-lg font-semibold font-sans">Deployment History (Experience)</h3>
+            </div>
+            
+            <div class="ml-2 md:ml-4">
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                    <!-- Skill Category 1 -->
-                    <div class="bg-cloud-900 p-6 rounded-lg border border-cloud-700 hover:border-cloud-accent transition-colors">
-                        <h3 class="font-mono text-cloud-accent mb-4 flex items-center">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
-                            Cloud & Infrastruktur
-                        </h3>
-                        <ul class="space-y-2 text-sm text-slate-300">
-                            <li><span class="text-cloud-accent">▹</span> AWS (Amazon Web Services)</li>
-                            <li><span class="text-cloud-accent">▹</span> GCP (Google Cloud Platform)</li>
-                            <li><span class="text-cloud-accent">▹</span> Azure (Dasar)</li>
-                            <li><span class="text-cloud-accent">▹</span> Linux (RHEL, CentOS, Ubuntu)</li>
-                        </ul>
+                <!-- Job 1 (Running) -->
+                <div class="relative pl-6 md:pl-8 pb-10 border-l-2 border-slate-800 last:border-0 last:pb-0 group">
+                    <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full border-4 border-[#181B1F] flex items-center justify-center bg-[#181B1F]">
+                        <i data-lucide="loader-2" class="w-[14px] h-[14px] text-[#3274D9] animate-spin"></i>
+                    </div>
+                    
+                    <div class="font-mono text-xs md:text-sm mb-3 text-slate-400 overflow-x-auto whitespace-nowrap pb-1 scrollbar-hide">
+                        <span class="text-slate-500">[Oct 2025 - Present]</span>
+                        <span class="text-[#00FF9D]">livio@system</span>
+                        <span class="text-[#3274D9]">~ %</span>
+                        <span class="text-white">./deploy --target=telkomsel-infra</span>
                     </div>
 
-                    <!-- Skill Category 2 -->
-                    <div class="bg-cloud-900 p-6 rounded-lg border border-cloud-700 hover:border-cloud-accent transition-colors">
-                        <h3 class="font-mono text-cloud-accent mb-4 flex items-center">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                            Orkestrasi & Otomatisasi
-                        </h3>
+                    <div class="bg-[#22252B] p-5 rounded-lg border border-slate-800 transition-colors group-hover:border-slate-600">
+                        <div class="mb-4 pb-4 border-b border-slate-800/50">
+                            <h4 class="text-lg font-semibold text-white font-sans">Cloud Engineer</h4>
+                            <div class="text-[#3274D9] font-mono text-sm">PT. Tech Mahindra Indonesia</div>
+                        </div>
                         <ul class="space-y-2 text-sm text-slate-300">
-                            <li><span class="text-cloud-accent">▹</span> Kubernetes</li>
-                            <li><span class="text-cloud-accent">▹</span> Red Hat OpenShift</li>
-                            <li><span class="text-cloud-accent">▹</span> Terraform (IaC)</li>
-                            <li><span class="text-cloud-accent">▹</span> Ansible / AAP</li>
-                        </ul>
-                    </div>
-
-                    <!-- Skill Category 3 -->
-                    <div class="bg-cloud-900 p-6 rounded-lg border border-cloud-700 hover:border-cloud-accent transition-colors">
-                        <h3 class="font-mono text-cloud-accent mb-4 flex items-center">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            CI/CD & Observability
-                        </h3>
-                        <ul class="space-y-2 text-sm text-slate-300">
-                            <li><span class="text-cloud-accent">▹</span> GitHub Actions, Jenkins, Bamboo</li>
-                            <li><span class="text-cloud-accent">▹</span> Prometheus & Grafana</li>
-                            <li><span class="text-cloud-accent">▹</span> Elasticsearch & Kibana</li>
-                            <li><span class="text-cloud-accent">▹</span> Bash, YAML, JSON Scripting</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="py-24 border-b border-cloud-800">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="flex items-center text-2xl font-bold text-white mb-12">
-                    <span class="font-mono text-cloud-accent text-xl mr-2">03.</span> Pengalaman Kerja
-                    <div class="h-px bg-cloud-800 ml-4 flex-grow"></div>
-                </h2>
-
-                <div class="space-y-12">
-                    <!-- Job 1 -->
-                    <article class="relative pl-8 md:pl-0">
-                        <div class="hidden md:block absolute left-[-29px] top-1.5 w-3 h-3 rounded-full bg-cloud-accent ring-4 ring-cloud-900"></div>
-                        <div class="md:border-l border-cloud-700 md:pl-8 pb-4">
-                            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
-                                <h3 class="text-xl font-bold text-white">Cloud Engineer <span class="text-cloud-accent">@ PT. Tech Mahindra Indonesia</span></h3>
-                                <span class="text-sm font-mono text-slate-500">Okt 2025 - Saat Ini</span>
-                            </div>
-                            <p class="text-sm font-medium text-slate-400 mb-4">Proyek: PT Telekomunikasi Selular - Infrastruktur Telekomunikasi</p>
-                            <ul class="list-none space-y-2 text-slate-400">
-                                <li class="flex items-start"><span class="text-cloud-accent mr-2 mt-1 text-xs">▹</span> Mendukung dan mengoperasikan platform telekomunikasi skala besar yang melayani jutaan pelanggan.</li>
-                                <li class="flex items-start"><span class="text-cloud-accent mr-2 mt-1 text-xs">▹</span> Mengelola 80+ akun AWS di berbagai environment (Production, Pre-prod, Non-prod).</li>
-                                <li class="flex items-start"><span class="text-cloud-accent mr-2 mt-1 text-xs">▹</span> Bertanggung jawab atas ketersediaan, reliabilitas, dan keamanan infrastruktur AWS public cloud.</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <!-- Job 2 -->
-                    <article class="relative pl-8 md:pl-0">
-                        <div class="hidden md:block absolute left-[-29px] top-1.5 w-3 h-3 rounded-full bg-cloud-700 ring-4 ring-cloud-900"></div>
-                        <div class="md:border-l border-cloud-700 md:pl-8 pb-4">
-                            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
-                                <h3 class="text-xl font-bold text-white">Cloud Engineer <span class="text-cloud-accent">@ PT. iZeno Teknologi Indonesia</span></h3>
-                                <span class="text-sm font-mono text-slate-500">Jan 2024 - Okt 2025</span>
-                            </div>
-                            <p class="text-sm font-medium text-slate-400 mb-4">Proyek: EMC Singapore, Starhub Singapore, Bank Rakyat Indonesia (BRI)</p>
-                            <ul class="list-none space-y-2 text-slate-400">
-                                <li class="flex items-start"><span class="text-cloud-accent mr-2 mt-1 text-xs">▹</span> Memigrasikan infrastruktur RHSSO legacy ke platform RHBK di OpenShift untuk penyedia telekomunikasi.</li>
-                                <li class="flex items-start"><span class="text-cloud-accent mr-2 mt-1 text-xs">▹</span> Mengelola 10+ cluster OpenShift di berbagai env dan mengimplementasikan monitoring otomatis dengan Prometheus/Grafana.</li>
-                                <li class="flex items-start"><span class="text-cloud-accent mr-2 mt-1 text-xs">▹</span> Menangani Google Apigee API Platform untuk memastikan ketersediaan API Perbankan.</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <!-- Job 3 -->
-                    <article class="relative pl-8 md:pl-0">
-                        <div class="hidden md:block absolute left-[-29px] top-1.5 w-3 h-3 rounded-full bg-cloud-700 ring-4 ring-cloud-900"></div>
-                        <div class="md:border-l border-cloud-700 md:pl-8 pb-4">
-                            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
-                                <h3 class="text-xl font-bold text-white">DevOps Engineer <span class="text-cloud-accent">@ Andalin</span></h3>
-                                <span class="text-sm font-mono text-slate-500">Mar 2023 - Des 2023</span>
-                            </div>
-                            <ul class="list-none space-y-2 text-slate-400 mt-4">
-                                <li class="flex items-start"><span class="text-cloud-accent mr-2 mt-1 text-xs">▹</span> Membangun pipeline CI/CD menggunakan GitHub Actions untuk layanan microservices.</li>
-                                <li class="flex items-start"><span class="text-cloud-accent mr-2 mt-1 text-xs">▹</span> Mengelola infrastruktur AWS & GCP (Networking, IAM, Storage, Compute).</li>
-                                <li class="flex items-start"><span class="text-cloud-accent mr-2 mt-1 text-xs">▹</span> **Dampak Key:** Mempercepat frekuensi deployment dengan otomatisasi dan mengurangi biaya cloud melalui resource right-sizing.</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                     <!-- Job 4 -->
-                     <article class="relative pl-8 md:pl-0">
-                        <div class="hidden md:block absolute left-[-29px] top-1.5 w-3 h-3 rounded-full bg-cloud-700 ring-4 ring-cloud-900"></div>
-                        <div class="md:pl-8 pb-4">
-                            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
-                                <h3 class="text-xl font-bold text-white">DevOps & Support Engineer <span class="text-cloud-accent">@ Berbagai Perusahaan</span></h3>
-                                <span class="text-sm font-mono text-slate-500">2021 - Feb 2023</span>
-                            </div>
-                            <p class="text-sm text-slate-400 mt-2">Termasuk peran di PT Datasintesa Teknologi Nusantara dan PT Klik Digital Sinergi (Project Telkomsel, BRI, BP Tapera). Fokus pada toolchain DevOps, monitoring server, penanganan insiden, dan rilis validasi menggunakan Jenkins, GitLab, Grafana, dan Kibana.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certifications & Education Section -->
-        <section id="certifications" class="py-24 bg-cloud-800/20">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <!-- Certifications -->
-                    <div>
-                        <h2 class="flex items-center text-2xl font-bold text-white mb-8">
-                            <span class="font-mono text-cloud-accent text-xl mr-2">04.</span> Sertifikasi
-                        </h2>
-                        <ul class="space-y-4">
-                            <li class="bg-cloud-900 p-4 rounded border border-cloud-800 flex items-start">
-                                <span class="text-cloud-accent mr-3">🏆</span>
-                                <div>
-                                    <h4 class="font-bold text-slate-200">Red Hat Certified System Administrator (RHCSA)</h4>
-                                    <p class="text-xs font-mono text-slate-500">2025 - 2027</p>
-                                </div>
+                            <li class="flex gap-2 items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-[#3274D9] shrink-0 mt-0.5"></i>
+                                <span>Operating large-scale telecommunication platforms serving millions of customers.</span>
                             </li>
-                            <li class="bg-cloud-900 p-4 rounded border border-cloud-800 flex items-start">
-                                <span class="text-cloud-accent mr-3">🏆</span>
-                                <div>
-                                    <h4 class="font-bold text-slate-200">Alibaba ACA Cloud Computing & Security</h4>
-                                    <p class="text-xs font-mono text-slate-500">2024 - 2026</p>
-                                </div>
+                            <li class="flex gap-2 items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-[#3274D9] shrink-0 mt-0.5"></i>
+                                <span>Managing <strong>80+ AWS accounts</strong> across prod, pre-prod, and non-prod environments.</span>
                             </li>
-                            <li class="bg-cloud-900 p-4 rounded border border-cloud-800 flex items-start">
-                                <span class="text-cloud-accent mr-3">🏆</span>
-                                <div>
-                                    <h4 class="font-bold text-slate-200">AWS Academy Cloud Foundations</h4>
-                                </div>
+                            <li class="flex gap-2 items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-[#3274D9] shrink-0 mt-0.5"></i>
+                                <span>Ensuring public cloud infrastructure reliability, availability, and strict security compliance.</span>
                             </li>
                         </ul>
                     </div>
+                </div>
 
-                    <!-- Education -->
-                    <div>
-                        <h2 class="flex items-center text-2xl font-bold text-white mb-8">
-                            <span class="font-mono text-cloud-accent text-xl mr-2">05.</span> Pendidikan
-                        </h2>
-                        <div class="bg-cloud-900 p-6 rounded border border-cloud-800">
-                            <h3 class="text-xl font-bold text-white">Diploma (Manajemen Informatika)</h3>
-                            <h4 class="text-cloud-accent font-medium mt-1">Politeknik LP3I Jakarta</h4>
-                            <p class="text-slate-400 mt-2">IPK: 3.04 / 4.00</p>
-                            <p class="text-sm font-mono text-slate-500 mt-1">2018 - 2021</p>
+                <!-- Job 2 (Success) -->
+                <div class="relative pl-6 md:pl-8 pb-10 border-l-2 border-slate-800 last:border-0 last:pb-0 group">
+                    <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full border-4 border-[#181B1F] flex items-center justify-center bg-[#181B1F]">
+                        <i data-lucide="check-circle" class="w-[14px] h-[14px] text-[#00FF9D]"></i>
+                    </div>
+                    
+                    <div class="font-mono text-xs md:text-sm mb-3 text-slate-400 overflow-x-auto whitespace-nowrap pb-1 scrollbar-hide">
+                        <span class="text-slate-500">[Jan 2024 - Oct 2025]</span>
+                        <span class="text-[#00FF9D]">livio@system</span>
+                        <span class="text-[#3274D9]">~ %</span>
+                        <span class="text-white">kubectl apply -f banking-and-telco-modernization.yaml</span>
+                    </div>
+
+                    <div class="bg-[#22252B] p-5 rounded-lg border border-slate-800 transition-colors group-hover:border-slate-600">
+                        <div class="mb-4 pb-4 border-b border-slate-800/50">
+                            <h4 class="text-lg font-semibold text-white font-sans">Cloud Engineer</h4>
+                            <div class="text-[#3274D9] font-mono text-sm">PT. iZeno Teknologi Indonesia</div>
+                        </div>
+                        <div class="space-y-4 text-sm text-slate-300">
+                            <div>
+                                <div class="font-mono text-[#F2CC0C] mb-1"># EMC Singapore</div>
+                                <p class="pl-4 border-l-2 border-slate-700">Executed application server modernization by migrating JBoss EAP 7.x to 8.x on RHEL.</p>
+                            </div>
+                            <div>
+                                <div class="font-mono text-[#F2CC0C] mb-1"># Starhub Singapore</div>
+                                <p class="pl-4 border-l-2 border-slate-700">Migrated legacy RHSSO to modern RHBK containerized infrastructure on Red Hat OpenShift, ensuring zero service disruption for telecommunications authentication.</p>
+                            </div>
+                            <div>
+                                <div class="font-mono text-[#F2CC0C] mb-1"># Bank Rakyat Indonesia (BRI)</div>
+                                <p class="pl-4 border-l-2 border-slate-700">Managed 10+ OpenShift clusters. Built self-healing automation and proactive monitoring via Prometheus/Grafana. Maintained high-availability for Google Apigee banking APIs.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Job 3 (Success) -->
+                <div class="relative pl-6 md:pl-8 pb-10 border-l-2 border-slate-800 last:border-0 last:pb-0 group">
+                    <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full border-4 border-[#181B1F] flex items-center justify-center bg-[#181B1F]">
+                        <i data-lucide="check-circle" class="w-[14px] h-[14px] text-[#00FF9D]"></i>
+                    </div>
+                    
+                    <div class="font-mono text-xs md:text-sm mb-3 text-slate-400 overflow-x-auto whitespace-nowrap pb-1 scrollbar-hide">
+                        <span class="text-slate-500">[Mar 2023 - Dec 2023]</span>
+                        <span class="text-[#00FF9D]">livio@system</span>
+                        <span class="text-[#3274D9]">~ %</span>
+                        <span class="text-white">terraform apply -auto-approve</span>
+                    </div>
+
+                    <div class="bg-[#22252B] p-5 rounded-lg border border-slate-800 transition-colors group-hover:border-slate-600">
+                        <div class="mb-4 pb-4 border-b border-slate-800/50">
+                            <h4 class="text-lg font-semibold text-white font-sans">DevOps Engineer</h4>
+                            <div class="text-[#3274D9] font-mono text-sm">Andalin</div>
+                        </div>
+                        <ul class="space-y-2 text-sm text-slate-300">
+                            <li class="flex gap-2 items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-[#3274D9] shrink-0 mt-0.5"></i>
+                                <span>Built end-to-end CI/CD pipelines via GitHub Actions for microservices architectures.</span>
+                            </li>
+                            <li class="flex gap-2 items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-[#3274D9] shrink-0 mt-0.5"></i>
+                                <span>Managed AWS & GCP networking, IAM, storage, and compute resources.</span>
+                            </li>
+                            <li class="flex gap-2 items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-[#3274D9] shrink-0 mt-0.5"></i>
+                                <span><strong>Impact:</strong> Accelerated deployment frequency and reduced overall cloud costs via resource right-sizing.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="bg-cloud-900 py-8 border-t border-cloud-800 text-center">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="font-mono text-sm text-slate-500 mb-2">Dirancang & Dibangun oleh Livio Tri Gieraldo</p>
-            <div class="flex justify-center space-x-4 mt-4 text-slate-400">
-                <a href="mailto:liviotrigieraldo21@gmail.com" class="hover:text-cloud-accent transition-colors">liviotrigieraldo21@gmail.com</a>
-                <span>|</span>
-                <span>Bekasi, Indonesia</span>
+        <!-- SECTION 5: Certifications -->
+        <section class="mb-12">
+            <div class="flex items-center gap-2 mb-4 text-white">
+                <i data-lucide="cloud" class="w-5 h-5 text-white"></i>
+                <h3 class="text-lg font-semibold font-sans">Verified Credentials</h3>
             </div>
-        </div>
-    </footer>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 font-mono text-sm">
+                
+                <div class="bg-[#22252B] px-4 py-3 rounded border border-slate-800 flex justify-between items-center group hover:border-[#00FF9D]/50 transition-colors">
+                    <span class="text-slate-300 truncate mr-4">Red Hat Certified System Administrator (RHCSA)</span>
+                    <span class="text-xs text-slate-500 shrink-0">2025-2027</span>
+                </div>
+                
+                <div class="bg-[#22252B] px-4 py-3 rounded border border-slate-800 flex justify-between items-center group hover:border-[#00FF9D]/50 transition-colors">
+                    <span class="text-slate-300 truncate mr-4">Alibaba ACA Cloud Computing</span>
+                    <span class="text-xs text-slate-500 shrink-0">2024-2026</span>
+                </div>
+                
+                <div class="bg-[#22252B] px-4 py-3 rounded border border-slate-800 flex justify-between items-center group hover:border-[#00FF9D]/50 transition-colors">
+                    <span class="text-slate-300 truncate mr-4">Alibaba Cloud Platform Security</span>
+                    <span class="text-xs text-slate-500 shrink-0">2024-2026</span>
+                </div>
+                
+                <div class="bg-[#22252B] px-4 py-3 rounded border border-slate-800 flex justify-between items-center group hover:border-[#00FF9D]/50 transition-colors">
+                    <span class="text-slate-300 truncate mr-4">AWS Academy Cloud Foundations</span>
+                    <span class="text-xs text-slate-500 shrink-0">Active</span>
+                </div>
 
+            </div>
+        </section>
+
+        <footer class="pt-8 border-t border-slate-800 text-center font-mono text-xs text-slate-500 flex items-center justify-center gap-2">
+            <span>~ %</span> exit 0
+        </footer>
+    </div>
+
+    <!-- Initialize Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
