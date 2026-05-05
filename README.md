@@ -17,7 +17,6 @@ It is designed to **simulate how infrastructure engineers think, operate, and de
 | Fonts        | Inter, JetBrains Mono |
 | Architecture | Static SPA |
 
-## 🧠 Author
+## Access
 
-**Livio Tri Gieraldo**  
-Cloud & DevOps Engineer
+You can access my portfolio here **https://gieraldo.github.io/liviotrigieraldo-portfolio/#**
